@@ -20,4 +20,10 @@
     <ProjectReference Include="..\WebApplication1.BLL\WebApplication1.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\SharedResources.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

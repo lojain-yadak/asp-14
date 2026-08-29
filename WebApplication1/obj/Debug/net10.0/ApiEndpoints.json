@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "WebApplication1.PL.Controllers.UsersController",
+    "Method": "Index",
+    "RelativePath": "api/Users",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

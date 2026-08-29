@@ -16,6 +16,11 @@
         },
         "runtime": {
           "WebApplication1.PL.dll": {}
+        },
+        "resources": {
+          "ar/WebApplication1.PL.resources.dll": {
+            "locale": "ar"
+          }
         }
       },
       "Azure.Core/1.50.0": {

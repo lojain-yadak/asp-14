@@ -30,3 +30,11 @@ build_property.MSBuildProjectDirectory = C:\Users\asus\Desktop\WebApplication1\W
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/asus/Desktop/WebApplication1/WebApplication1/Resources/SharedResources.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\SharedResources.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/Desktop/WebApplication1/WebApplication1/Resources/SharedResources.ar.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\SharedResources.ar.resx
+build_metadata.AdditionalFiles.CssScope = 

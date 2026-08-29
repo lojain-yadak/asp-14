@@ -12,5 +12,10 @@
       "url": "http://localhost:5203"
     }
   ],
-  "paths": { }
+  "paths": { },
+  "tags": [
+    {
+      "name": "Users"
+    }
+  ]
 }
