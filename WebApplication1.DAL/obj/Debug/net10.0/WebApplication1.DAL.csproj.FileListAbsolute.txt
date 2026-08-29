@@ -1,0 +1,15 @@
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\bin\Debug\net10.0\WebApplication1.DAL.deps.json
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\bin\Debug\net10.0\WebApplication1.DAL.runtimeconfig.json
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\bin\Debug\net10.0\WebApplication1.DAL.dll
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\bin\Debug\net10.0\WebApplication1.DAL.pdb
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\WebApplication1.DAL.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\WebApplication1.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\WebApplication1.DAL.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\WebApplication1.DAL.AssemblyInfo.cs
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\WebApplication1.DAL.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\WebApplication1.DAL.sourcelink.json
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\WebApplication1.DAL.dll
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\refint\WebApplication1.DAL.dll
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\WebApplication1.DAL.pdb
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\WebApplication1.DAL.genruntimeconfig.cache
+C:\Users\asus\Desktop\WebApplication1\WebApplication1.DAL\obj\Debug\net10.0\ref\WebApplication1.DAL.dll
