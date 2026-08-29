@@ -2,10 +2,14 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
+using WebApplication1.BLL.Services;
 using WebApplication1.DAL;
 using WebApplication1.DAL.DTOs.Request;
 using WebApplication1.DAL.DTOs.Response;
 using WebApplication1.DAL.Models;
+using WebApplication1.DAL.Repository;
+using WebApplication1.PL.Resources;
 
 namespace WebApplication1.PL.Controllers
 {
@@ -13,25 +17,27 @@ namespace WebApplication1.PL.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IStringLocalizer<SharedResources> _localizer;
+        private readonly ICategoryService _categoryService;
 
-        public CategoriesController(ApplicationDbContext context)
+        public CategoriesController(IStringLocalizer<SharedResources> localizer, ICategoryService categoryService)
         {
-            _context = context;
+            _localizer = localizer;
+           
+            _categoryService = categoryService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var categories = _context.Categories.Include(c => c.Translations).ToList();
-            var response = categories.Adapt<List<CategoryResponse>>();
-            return Ok(response);
+
+           var category= await _categoryService.GetAllAsync();
+            return Ok(category);
         }
         [HttpPost("")]
-        public IActionResult Create(CategoryRequest request)
+        public async Task<IActionResult>Create(CategoryRequest request)
         {
-            var category= request.Adapt<Category>();
-            _context.Add(category);
-            _context.SaveChanges();
-            return Ok(category);
+           var response= await _categoryService.CreateAsync(request);
+            
+            return Ok();
         }
        
     }

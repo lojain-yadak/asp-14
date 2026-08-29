@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v10.0": {
       "WebApplication1.PL/1.0.0": {
         "dependencies": {
-          "Mapster": "10.0.12",
           "Microsoft.AspNetCore.OpenApi": "10.0.11",
           "Microsoft.EntityFrameworkCore": "10.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.11",
@@ -846,6 +845,7 @@
       },
       "WebApplication1.BLL/1.0.0": {
         "dependencies": {
+          "Mapster": "10.0.12",
           "WebApplication1.DAL": "1.0.0"
         },
         "runtime": {

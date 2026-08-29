@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+	  <PackageReference Include="Mapster" Version="10.0.12" />
     <ProjectReference Include="..\WebApplication1.DAL\WebApplication1.DAL.csproj" />
   </ItemGroup>
 

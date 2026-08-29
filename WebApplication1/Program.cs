@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Globalization;
+using WebApplication1.BLL.Services;
 using WebApplication1.DAL;
+using WebApplication1.DAL.Repository;
 using WebApplication1.PL;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +33,9 @@ builder.Services.Configure<RequestLocalizationOptions>(options => {
     options.RequestCultureProviders.Clear();
     options.RequestCultureProviders.Add( new AcceptLanguageHeaderRequestCultureProvider());
 });
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 var app = builder.Build();
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
