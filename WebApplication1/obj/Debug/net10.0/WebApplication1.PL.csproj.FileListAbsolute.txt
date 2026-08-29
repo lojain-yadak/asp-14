@@ -174,3 +174,5 @@ C:\Users\asus\Desktop\WebApplication1\WebApplication1\obj\Debug\net10.0\WebAppli
 C:\Users\asus\Desktop\WebApplication1\WebApplication1\obj\Debug\net10.0\WebApplication1.PL.Resources.SharedResources.ar.resources
 C:\Users\asus\Desktop\WebApplication1\WebApplication1\bin\Debug\net10.0\ar\WebApplication1.PL.resources.dll
 C:\Users\asus\Desktop\WebApplication1\WebApplication1\obj\Debug\net10.0\ar\WebApplication1.PL.resources.dll
+C:\Users\asus\Desktop\WebApplication1\WebApplication1\bin\Debug\net10.0\Mapster.dll
+C:\Users\asus\Desktop\WebApplication1\WebApplication1\bin\Debug\net10.0\Mapster.Core.dll

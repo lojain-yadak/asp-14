@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "WebApplication1.PL.Controllers.CategoriesController",
+    "Method": "Index",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.PL.Controllers.CategoriesController",
+    "Method": "Create",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApplication1.DAL.DTOs.Request.CategoryRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApplication1.PL.Controllers.UsersController",
     "Method": "Index",
     "RelativePath": "api/Users",

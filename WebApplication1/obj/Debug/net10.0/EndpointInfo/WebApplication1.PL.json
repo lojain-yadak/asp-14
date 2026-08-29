@@ -12,8 +12,70 @@
       "url": "http://localhost:5203"
     }
   ],
-  "paths": { },
+  "paths": {
+    "/api/Categories": {
+      "post": {
+        "tags": [
+          "Categories"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CategoryRequest": {
+        "type": "object",
+        "properties": {
+          "translations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CategoryTranslationRequest"
+            }
+          }
+        }
+      },
+      "CategoryTranslationRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
   "tags": [
+    {
+      "name": "Categories"
+    },
     {
       "name": "Users"
     }
