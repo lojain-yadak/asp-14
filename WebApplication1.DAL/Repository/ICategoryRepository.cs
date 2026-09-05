@@ -6,9 +6,8 @@ using WebApplication1.DAL.Models;
 
 namespace WebApplication1.DAL.Repository
 {
-    public interface ICategoryRepository
+    public interface ICategoryRepository: IGenaricRepository<Category>
     {
-        Task<List<Category>> GetAllAsync();
-        Task<Category> CreateAsync(Category category);
+        
     }
 }

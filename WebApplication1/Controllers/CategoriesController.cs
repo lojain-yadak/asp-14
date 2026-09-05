@@ -39,6 +39,32 @@ namespace WebApplication1.PL.Controllers
             
             return Ok();
         }
-       
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCategory(int id)
+        {
+            var category = await _categoryService.GetCategory(c => c.Id == id);
+            return Ok(category);
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            var result = await _categoryService.DeleteCategory(id);
+            if (!result)
+            {
+                return NotFound();
+            }
+            return Ok();
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCategory(int id, CategoryRequest request)
+        {
+            var result = await _categoryService.UpdateCategory(request, c => c.Id == id);
+            if (!result)
+            {
+                return NotFound();
+            }
+            return Ok();
+        }
     }
+
 }
