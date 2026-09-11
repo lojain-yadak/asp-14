@@ -1,11 +1,14 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 using WebApplication1.BLL.Services;
 using WebApplication1.DAL;
+using WebApplication1.DAL.Models;
 using WebApplication1.DAL.Repository;
 using WebApplication1.PL;
+using WebApplication1.PL.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,9 +36,13 @@ builder.Services.Configure<RequestLocalizationOptions>(options => {
     options.RequestCultureProviders.Clear();
     options.RequestCultureProviders.Add( new AcceptLanguageHeaderRequestCultureProvider());
 });
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();  
+builder.Services.AddScoped<ISeedData, RoleSeedData>();
 var app = builder.Build();
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
@@ -48,6 +55,17 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var seeders = services.GetServices<ISeedData>();
+    foreach (var seeder in seeders)
+    {
+        await seeder.DataSeed();
+    }
+    
+}
 
 app.MapControllers();
 

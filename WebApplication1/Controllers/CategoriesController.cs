@@ -55,7 +55,7 @@ namespace WebApplication1.PL.Controllers
             }
             return Ok();
         }
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<IActionResult> UpdateCategory(int id, CategoryRequest request)
         {
             var result = await _categoryService.UpdateCategory(request, c => c.Id == id);

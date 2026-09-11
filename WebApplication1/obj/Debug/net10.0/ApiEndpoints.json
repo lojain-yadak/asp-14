@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "WebApplication1.PL.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/Account/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApplication1.DAL.DTOs.Request.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApplication1.PL.Controllers.CategoriesController",
     "Method": "Index",
     "RelativePath": "api/Categories",
@@ -61,7 +77,7 @@
     "ContainingType": "WebApplication1.PL.Controllers.CategoriesController",
     "Method": "UpdateCategory",
     "RelativePath": "api/Categories/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [

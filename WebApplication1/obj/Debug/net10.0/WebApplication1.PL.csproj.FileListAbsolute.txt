@@ -176,3 +176,4 @@ C:\Users\asus\Desktop\WebApplication1\WebApplication1\bin\Debug\net10.0\ar\WebAp
 C:\Users\asus\Desktop\WebApplication1\WebApplication1\obj\Debug\net10.0\ar\WebApplication1.PL.resources.dll
 C:\Users\asus\Desktop\WebApplication1\WebApplication1\bin\Debug\net10.0\Mapster.dll
 C:\Users\asus\Desktop\WebApplication1\WebApplication1\bin\Debug\net10.0\Mapster.Core.dll
+C:\Users\asus\Desktop\WebApplication1\WebApplication1\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
