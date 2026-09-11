@@ -22,6 +22,20 @@ namespace WebApplication1.PL.Controllers
             var result = await _authenticationService.RegisterAsync(request);
             return Ok(result);
         }
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginRequest request)
+        {
+            var result = await _authenticationService.LoginAsync(request);
+            return Ok(result);
+        }
+
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail([FromQuery] string email)
+        {
+            // Implementation for confirming email
+            return Ok("Email confirmed.");
+        }
     }
+
 
 }

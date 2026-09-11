@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Globalization;
+using WebApplication1.BLL.Common;
 using WebApplication1.BLL.Services;
 using WebApplication1.DAL;
 using WebApplication1.DAL.Models;
@@ -43,6 +44,7 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();  
 builder.Services.AddScoped<ISeedData, RoleSeedData>();
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 var app = builder.Build();
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
